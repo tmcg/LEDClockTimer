@@ -1,0 +1,24 @@
+
+Enclosure size - splitting PCB up into three parts
+
+Cutting holes without a dremel
+
+Mounting enclosure screws up instead of screws down
+
+Fitting LED display flush into the lid of the enclosure
+
+Yellow wire...
+
+74HC595 driving current limited
+
+Lack of realtime clock module will mean clock drift
+
+Only two leds harmed in the making
+
+Late changes:
+  Switches with LEDs in the enclosure require additional code
+  Driving piezo buzzer with transistor instead of directly due to leakage noise
+
+
+Disney 'Let It Go' music composition
+
