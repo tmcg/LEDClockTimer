@@ -1,3 +1,4 @@
+
 /*
   Driving a 74HC595 shift register IC for a 7-segment display, 
  with a TPIC6B595 shift register to sink the LED 7 segment 
@@ -6,7 +7,7 @@
  Current for each digit: ~40mA  (8 segments incl decimal * ~5.0mA per segment)
  */
 
-#include <Time.h>
+#include <TimeLib.h>
 
 #define SREG_CLOCK_PIN 2
 #define SREG_LATCH_PIN 3
@@ -72,7 +73,7 @@ struct clock_t {
   time_t cx_CountdownStart;
   short cx_CountdownLength;
   time_t cx_CurrentTime;
-  long cx_ClockMillis;
+  unsigned long cx_ClockMillis;
 };
 
 struct clock_t deviceData;
@@ -172,7 +173,7 @@ void playTune(int outputPin, int abortPin, int* tune, int tuneLen, int defaultNo
   }
 }
 
-boolean enablePeriod(long msec, long freq) {
+boolean enablePeriod(unsigned long msec, unsigned long freq) {
   return ((msec/freq)%10) > 5;
 }
 
